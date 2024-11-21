@@ -1,0 +1,20 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Menu.ShoppingListPage"
+             Title="Список покупок">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="Список покупок" FontSize="24" HorizontalOptions="Center" />
+            <CollectionView x:Name="ShoppingListCollection" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Horizontal" Padding="5">
+                            <Label Text="{Binding Name}" FontSize="18" />
+                            <Label Text="{Binding Quantity}" FontSize="18" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
